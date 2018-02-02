@@ -1,9 +1,18 @@
+namespace FSharpTest 
 
-#import "Math.fsx"
-#import "PigLatin.fsx"
+    module FSharpTest =
 
-[0..100]
-        |> MyMath.DivideByTwoAndFilterOdds
-        |> MyMath.ReconciliateEvens
+        [<EntryPoint>]
+        let main _args  =
 
-PigLatin.pigLatin "Moi kaikki miten menee?"
+            printfn "%i" (
+                [0..100]
+                |> MyMath.DivideByTwoAndFilterOdds
+                |> MyMath.ReconciliateEvens);
+
+
+            printfn "%s" (
+                "Moi mita kuuluu?" 
+                |> PigLatin.pigLatin)
+
+            0

@@ -1,4 +1,6 @@
 // Case Strings
+namespace FSharpTest 
+
 module PigLatin =
     open System
     
@@ -20,6 +22,6 @@ module PigLatin =
 
     let pigLatin (sentence : string) =
         sentence.Split [|' '|]
-        |> Array.fold ( fun acc elem -> acc + " " + toPigLatin elem  ) ""
+        |> Array.fold ( fun total nextWord -> total + toPigLatin nextWord + " "  ) ""
 
 

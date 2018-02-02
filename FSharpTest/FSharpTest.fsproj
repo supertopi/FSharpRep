@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Math.fs" />
+    <Compile Include="PigLatin.fs" />
     <Compile Include="FSharpTest.fs" />
-    <Compile Include="Math.fsx" />
-    <Compile Include="PigLatin.fsx" />
   </ItemGroup>
 </Project>

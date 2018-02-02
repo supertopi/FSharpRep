@@ -1,5 +1,6 @@
 //Case Math
 //Basic functions
+namespace FSharpTest
 
 module MyMath =
 
