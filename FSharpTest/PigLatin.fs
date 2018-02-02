@@ -9,19 +9,18 @@ module PigLatin =
         lowerCase 
         |> List.append ( lowerCase  |> List.map Char.ToUpper )
 
-    let toPigLatin (word :string) =
+    let private wordToPigLatin (word :string) =
 
         let isVowel c = 
             List.contains c vowels
-
-        if isVowel word.[0] then 
-            word + "yay"
-        else 
-            word.[1..] + string(word.[0]) + "ay"
+        
+        match isVowel word.[0] with
+            | true -> word + "yay"
+            | false -> word.[1..] + string(word.[0]) + "ay"
 
 
     let pigLatin (sentence : string) =
         sentence.Split [|' '|]
-        |> Array.fold ( fun total nextWord -> total + toPigLatin nextWord + " "  ) ""
+        |> Array.fold ( fun total nextWord -> total + wordToPigLatin nextWord + " "  ) ""
 
 

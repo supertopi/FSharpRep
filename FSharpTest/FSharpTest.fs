@@ -11,8 +11,8 @@ namespace FSharpTest
                 |> MyMath.ReconciliateEvens);
 
 
-            printfn "%s" (
-                "Moi mita kuuluu?" 
+            printf "%s" (
+                "Moi Eatech mita kuuluu" 
                 |> PigLatin.pigLatin)
 
             0

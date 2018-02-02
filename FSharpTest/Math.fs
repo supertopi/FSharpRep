@@ -4,7 +4,6 @@ namespace FSharpTest
 
 module MyMath =
 
-
     let MultiplyByTwo a =
         a * 2
 
@@ -19,15 +18,16 @@ module MyMath =
            |> not
 
     //Lists 
-    let DivideByTwoAndFilterOdds lista =
-        lista
+    let DivideByTwoAndFilterOdds l =
+        l
         |> List.map DivideByTwo
         |> List.filter IsOdd
 
+    
     //Pattern Match
-    let ReconciliateEvens list1d =
-        match List.tryFind IsOdd list1d with
-        | Some value ->  value
+    let ReconciliateEvens l =
+        match List.tryFind IsOdd l with
+        | Some value -> value
         | None -> -1
 
 

@@ -1,4 +1,3 @@
-C:\vso\FSharpTest\FSharpRep\FSharpTest\obj\Debug\net461\FSharpTest.fsprojResolveAssemblyReference.cache
 C:\vso\FSharpTest\FSharpRep\FSharpTest\bin\Debug\net461\FSharpTest.exe
 C:\vso\FSharpTest\FSharpRep\FSharpTest\bin\Debug\net461\FSharpTest.pdb
 C:\vso\FSharpTest\FSharpRep\FSharpTest\bin\Debug\net461\FSharp.Core.dll
