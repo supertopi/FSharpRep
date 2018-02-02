@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FSharpTest.fs" />
+    <Compile Include="Math.fsx" />
+    <Compile Include="PigLatin.fsx" />
+  </ItemGroup>
+  <Import Project="..\..\vso\Paket.Restore.targets" />
+</Project>
