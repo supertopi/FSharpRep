@@ -9,5 +9,4 @@
     <Compile Include="Math.fsx" />
     <Compile Include="PigLatin.fsx" />
   </ItemGroup>
-  <Import Project="..\..\vso\Paket.Restore.targets" />
 </Project>
