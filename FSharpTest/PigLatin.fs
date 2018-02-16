@@ -4,10 +4,9 @@ namespace FSharpTest
 module PigLatin =
     open System
     
-    let vowels =
+    let private vowels =
         let lowerCase = ['a';'e';'i';'o';'u']
-        lowerCase 
-        |> List.append ( lowerCase  |> List.map Char.ToUpper )
+        lowerCase |> List.append ( lowerCase  |> List.map Char.ToUpper )
 
     let private wordToPigLatin (word :string) =
 
@@ -19,7 +18,7 @@ module PigLatin =
             | false -> word.[1..] + string(word.[0]) + "ay"
 
 
-    let pigLatin (sentence : string) =
+    let ToPigLatin (sentence : string) =
         sentence.Split [|' '|]
         |> Array.fold ( fun total nextWord -> total + wordToPigLatin nextWord + " "  ) ""
 

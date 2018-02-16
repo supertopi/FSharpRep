@@ -7,12 +7,12 @@ namespace FSharpTest
 
             printfn "%i" (
                 [0..100]
-                |> MyMath.DivideByTwoAndFilterOdds
+                |> MyMath.DivideByTwoAndFilterEvens
                 |> MyMath.ReconciliateEvens);
 
 
             printf "%s" (
-                "Moi Eatech mita kuuluu" 
-                |> PigLatin.pigLatin)
+                "Hello World from F#" 
+                |> PigLatin.ToPigLatin)
 
             0
