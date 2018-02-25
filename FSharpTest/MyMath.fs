@@ -12,19 +12,17 @@ module MyMath =
 
     let IsOdd a =
          a |> IsEven |> not
-           
 
-    //Lists 
+
     let DivideByTwoAndFilterEvens numbers =
         numbers
         |> List.map DivideByTwo
         |> List.filter IsOdd
 
-    
-    //Pattern Match
+
     let ReconciliateEvens numbers =
-        match List.tryFind IsOdd numbers with
-        | Some value -> value
-        | None -> -1
+        match List.tryFind IsEven numbers with
+        | Some _ -> true
+        | None -> false
 
 

@@ -5,8 +5,8 @@
     <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Math.fs" />
+    <Compile Include="MyMath.fs" />
     <Compile Include="PigLatin.fs" />
-    <Compile Include="FSharpTest.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 </Project>

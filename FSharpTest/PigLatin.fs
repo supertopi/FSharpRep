@@ -8,6 +8,7 @@ module PigLatin =
         let lowerCase = ['a';'e';'i';'o';'u']
         lowerCase |> List.append ( lowerCase  |> List.map Char.ToUpper )
 
+
     let private wordToPigLatin (word :string) =
 
         let isVowel c = 
