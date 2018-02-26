@@ -5,10 +5,12 @@ namespace FSharpTest
         [<EntryPoint>]
         let main _args  =
 
+            printfn "%i" (MyMath.DivideByTwo 5)
+
             printfn "%b" (
                 [0..100]
-                |> MyMath.DivideByTwoAndFilterEvens
-                |> MyMath.ReconciliateEvens);
+                |> MyMath.MultiplyByTwoAndPreserveOdds
+                |> MyMath.HasEvens);
 
 
             printf "%s" (

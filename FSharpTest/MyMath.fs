@@ -6,7 +6,7 @@ module MyMath =
 
     let MultiplyByTwo a = a * 2
 
-    let DivideByTwo a =  a / 2
+    let DivideByTwo a =   a / 2
 
     let IsEven a = (a % 2) = 0
 
@@ -14,13 +14,13 @@ module MyMath =
          a |> IsEven |> not
 
 
-    let DivideByTwoAndFilterEvens numbers =
+    let MultiplyByTwoAndPreserveOdds numbers =
         numbers
-        |> List.map DivideByTwo
+        |> List.map MultiplyByTwo
         |> List.filter IsOdd
 
 
-    let ReconciliateEvens numbers =
+    let HasEvens numbers =
         match List.tryFind IsEven numbers with
         | Some _ -> true
         | None -> false
