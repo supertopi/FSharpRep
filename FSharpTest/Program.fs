@@ -13,9 +13,14 @@ namespace FSharpTest
                 |> MyMath.HasEvens);
 
 
-            printf "%s" (
+            printfn "%s" (
                 "Hello World from F#" 
                 |> PigLatin.ToPigLatin)
+            
+            printfn "%s" (
+                "My standard gravational force in Newtons:  " + 
+                string (CSharpPhysics.MyPhysics.GetStandardGravityForce( 64.2 ) ))
+
 
             System.Console.ReadKey(true) |> ignore 
 

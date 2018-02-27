@@ -24,5 +24,3 @@ module MyMath =
         match List.tryFind IsEven numbers with
         | Some _ -> true
         | None -> false
-
-
