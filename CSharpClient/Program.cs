@@ -17,6 +17,12 @@ namespace CSharpClient
             Console.WriteLine($"{ FSharpTest.MyMath.HasEvens(fsInteropNum) }");
 
             Console.WriteLine( FSharpTest.PigLatin.ToPigLatin("Hello world from C#") );
+
+            Task.Run( async () => {
+                await FSharpTest.Worker.DoStuffInteropAsync(5000);
+                Console.WriteLine("Work complete!");
+                });
+
             Console.ReadKey();
         }
     }

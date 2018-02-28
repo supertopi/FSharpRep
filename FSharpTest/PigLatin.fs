@@ -3,7 +3,7 @@ namespace FSharpTest
 
 module PigLatin =
     open System
-    
+
     let private vowels =
         let lowerCase = ['a';'e';'i';'o';'u']
         lowerCase |> List.append ( lowerCase  |> List.map Char.ToUpper )

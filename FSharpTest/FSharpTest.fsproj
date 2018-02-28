@@ -7,6 +7,7 @@
   <ItemGroup>
     <Compile Include="MyMath.fs" />
     <Compile Include="PigLatin.fs" />
+	<Compile Include="Worker.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

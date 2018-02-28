@@ -21,6 +21,8 @@ namespace FSharpTest
                 "My standard gravational force in Newtons:  " + 
                 string (CSharpPhysics.MyPhysics.GetStandardGravityForce( 64.2 ) ))
 
+            Worker.DoStuffAsync 5000 |>  Async.RunSynchronously
+            printfn "%s" ("Work complete!") 
 
             System.Console.ReadKey(true) |> ignore 
 
