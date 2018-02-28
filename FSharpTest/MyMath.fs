@@ -10,8 +10,7 @@ module MyMath =
 
     let IsEven a = (a % 2) = 0
 
-    let IsOdd a =
-         a |> IsEven |> not
+    let IsOdd a = a |> IsEven |> not
 
 
     let MultiplyByTwoAndPreserveOdds numbers =

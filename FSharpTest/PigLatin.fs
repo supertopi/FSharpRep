@@ -21,6 +21,6 @@ module PigLatin =
 
     let ToPigLatin (sentence : string) =
         sentence.Split [|' '|]
-        |> Array.fold ( fun total nextWord -> total + wordToPigLatin nextWord + " "  ) ""
+        |> Array.fold ( fun total nextWord -> total + wordToPigLatin nextWord + " "  ) String.Empty
 
 
