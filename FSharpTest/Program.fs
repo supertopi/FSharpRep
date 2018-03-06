@@ -7,7 +7,6 @@ namespace FSharpTest
         [<EntryPoint>]
         let main _args  =
 
-
             printfn "%i" (MyMath.DivideByTwo 5)
 
             printfn "%b" (
@@ -35,13 +34,7 @@ namespace FSharpTest
 
             let p = { Information = { Name = "Wayne Gretzky"; Age = 57 }; Pos = Center ; Number = 99}
             
-            let IsGoalie player =
-                match p.Pos with
-                    | Goalie -> "Moke"
-                    | _ -> "Ei oo moke"
-            
-            printfn "%s" ( p.Information.Name + ": " + IsGoalie p)
-            
+            printfn "%s" (IsGoalie p)
 
             System.Console.ReadKey(true) |> ignore 
 

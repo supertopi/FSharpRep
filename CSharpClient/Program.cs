@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FSharpTest;
 
 namespace CSharpClient
 {
@@ -13,15 +14,21 @@ namespace CSharpClient
             var processedNumbers = new int[] { 1, 2, 3 };
             var fsInteropNum = Microsoft.FSharp.Collections.ListModule.OfSeq(processedNumbers);
 
-            Console.WriteLine($"{ FSharpTest.MyMath.MultiplyByTwoAndPreserveOdds(fsInteropNum) }");
-            Console.WriteLine($"{ FSharpTest.MyMath.HasEvens(fsInteropNum) }");
+            Console.WriteLine($"{ MyMath.MultiplyByTwoAndPreserveOdds(fsInteropNum) }");
+            Console.WriteLine($"{ MyMath.HasEvens(fsInteropNum) }");
+            Console.WriteLine($"{ MyMath.HasEvens(MyMath.MultiplyByTwoAndPreserveOdds(fsInteropNum)) }");
 
-            Console.WriteLine( FSharpTest.PigLatin.ToPigLatin("Hello world from C#") );
+
+            Console.WriteLine( PigLatin.ToPigLatin("Hello world from C#") );
 
             Task.Run( async () => {
-                await FSharpTest.Worker.DoStuffInteropAsync(5000);
+                await Worker.DoStuffInteropAsync(5000);
                 Console.WriteLine("Work complete!");
                 });
+
+            //var member = new FSharpTest.HockeyTeam.TeamMember(); cannot be done!
+            var player = new HockeyTeam.Player(new HockeyTeam.Person("Gordie Howe", 88), HockeyTeam.Position.Wingman, 9);
+            Console.WriteLine(HockeyTeam.IsGoalie(player));
 
             Console.ReadKey();
         }
