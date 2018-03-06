@@ -10,10 +10,9 @@ module PigLatin =
 
 
     let private wordToPigLatin (word :string) =
-
         let isVowel c = 
             List.contains c vowels
-        
+            
         match isVowel word.[0] with
             | true -> word + "yay"
             | false -> word.[1..] + string(word.[0]) + "ay"
